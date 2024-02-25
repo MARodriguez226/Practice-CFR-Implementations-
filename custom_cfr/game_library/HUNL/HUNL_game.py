@@ -339,7 +339,8 @@ def chance_util(func,i_map,history,i,j,pr_1,pr_2,pr_c,player_1_stack,player_2_st
         flop_set = computed_flop_buckets[int(i)]
 
         for flop in tqdm(flop_set) :
-            flop_ev += func(i_map,history + "&&",str(i) + " "+ str(flop),str(j) + " "+str(flop),pr_1,pr_2,pr_c*1/len(flop_set))
+            parity =  '&&' if len(history) % 2 else '&&&'
+            flop_ev += func(i_map,history + parity,str(i) + " "+ str(flop),str(j) + " "+str(flop),pr_1,pr_2,pr_c*1/len(flop_set))
         return flop_ev/len(flop_set)
     
     elif "@" not in history:
@@ -347,15 +348,17 @@ def chance_util(func,i_map,history,i,j,pr_1,pr_2,pr_c,player_1_stack,player_2_st
         card1,card2 = i.split()
         turn_subset = computed_turn_buckets[(int(card1),int(card2))]
         for turn in turn_subset:
-            turn_ev += func(i_map,history + "@@",i + " "+str(turn),j + " "+str(turn),pr_1,pr_2,pr_c*1/len(turn_subset))
+            parity =  '@@' if len(history) % 2 else '@@@'
+            turn_ev += func(i_map,history + parity,i + " "+str(turn),j + " "+str(turn),pr_1,pr_2,pr_c*1/len(turn_subset))
         return turn_ev/len(turn_subset)
     
     elif "#" not in history:
         river_ev = 0
         bucket_1,bucket_2,bucket_3 = i.split()
         river_subset = computed_river_buckets[(int(bucket_1),int(bucket_2),int(bucket_3))]
+        parity =  '##' if len(history) % 2 else '###'
         for river in river_subset:
-            river_ev += func(i_map,history + "##",i +" "+ str(river),j + " "+str(river),pr_1,pr_2,pr_c*1/len(river_subset))
+            river_ev += func(i_map,history + parity,i +" "+ str(river),j + " "+str(river),pr_1,pr_2,pr_c*1/len(river_subset))
         return river_ev/len(river_subset)            
     
 def card_str(hand):
