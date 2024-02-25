@@ -12,7 +12,8 @@ Heads Up No Limit Texas Hold'em (HUNL) was the last major challenge in my CFR im
 Since the solution.txt files can get pretty large I uploaded a few to this dropbox for people to check out.Just for a quick formatting guide, 
 [cards/buckets] [history] [frequencies] 
 history = {??: pre-flop, &&: flop , @@: Turn, ##: river, x:check, {p,b,B,O,a}: bet, f:fold}
-frequencies, in order of most passive possible move [check/call] to least passive [all-in], when possible last element always fold.
+frequencies, in order of most passive possible move [check/call] to least passive [all-in], when possibl, last element is always fold.
+
 ex. 2s2h 3h4h3c ??pc&&xbB [.60,.10,.30], here we have 2s2h, the pre-flop action when raise-call, the flop came 3h4h3c and opponent checked (x) we bet 33% (b) and opponent raised 75% (B), we are left with 3 possible options [call, all-in, fold], with frequencies call 60%, all-in 10%, and fold 30%.
 
 solution will be posted on a rolling biases:
