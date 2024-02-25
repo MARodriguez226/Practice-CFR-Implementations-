@@ -1,0 +1,48 @@
+Shortest Deck is a simplified game of HUNLH
+
+The game is initalized where both players start with 20BB,
+The game starts with player 1 staking 0.5BB and player 2 staking 1BB
+
+def raise: 2.5 times previous players bet or if previous bet times 2.5 greater than current stack resulting bet is all-in
+def deck: deck only contains 10 cards A-5 2 suits hearts and spades
+def hand: a players hand consists of 2 cards from the deck randomly drawn
+def game: poker but only preflop is playable 
+
+player 1 has 4 option (fold, call,raise, all-in)
+    player 1 folds:
+        game ends player 2 wins 0.5BB
+
+    player 1 calls:
+        player 2 has 3 option (check, raise, all-in)
+            player 2 checks:
+                The 3 card flop is dealt better 5 card hand wins pot of 2
+
+            player 2 raise:
+                player 1 has 4 options (call,raise,fold, all-in)
+                    ...continued
+    
+    player 1 raise:
+        player 2 has 3 options (call,raise,fold,all-in)
+            if player 2 calls:
+                The 3 card flop is dealt better 5 card hand wins pot of 10bb
+
+            if player 2 raises:
+                player 1 has 4 options (call,fold,raise,all-in)
+                    ...continued
+            
+            if player 2 folds:
+                player 1 wins pot
+            
+            if player 2 all-ins:
+                player 1 has 2 options (call, fold)
+                    if player 1 calls:
+                        The 3 card flop is dealt better 5 card hand wins pot of 40BB
+
+                    if player 1 folds:
+                        player 2 wins pot
+
+    player 1 all-ins:
+        player 2 has 2 options (call or fold)
+            if player 2 calls:
+                The 3 card flop is dealt better 5 card hand wins pot of 40BBs
+

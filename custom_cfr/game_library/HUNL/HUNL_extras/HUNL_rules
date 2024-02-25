@@ -1,0 +1,110 @@
+Heads Up No-Limit Texas Hold'em
+Initalizations:
+    player_1 (button/SB): 100BB
+    player_2 (BB): 100BB
+
+    player_1 pays 0.5BB small-blind
+    player_2 pays 1BB big-blind
+
+Preflop:
+    player_1 starts action can call,bet,or fold
+        if player_1 fold:   
+            action closes player_2 wins 0.5BB
+        
+        if player_1 calls:
+            player_2 can check to end preflop action or raise to reopen action.
+
+        if player_1 bets:
+            player_2 can call to close preflop action, raise to reopen action, or fold to close action in which case player_1 wins 0.5BB
+
+                if player_2 raises player_1 has decison to call and close preflop action,raise and reopen action, or fold.
+                    
+                    if player_1 raises...
+
+Flop/Turn:
+    player_2 starts action can check or bet
+        if player_2 checks:
+            player_1 given action and can check or bet.
+
+                if player_1 checks:
+                    action closes and we continue to the next betting street.
+
+                If player_1 bets;
+                    player_2 can call to close action and continue to next street or raise to reopen action or fold.
+                    
+                        if player_2 calls:
+                            action closes and we continue to the next betting street.
+
+                        if player_2 bets:
+                            player_1 can call to close action and continue to next street, raise to reopen action or fold.
+
+                                if player_1 bets:
+                                    ...
+
+                        if player_2 folds:
+                            action closes and player_1 wins.
+
+        if player_2 bets:
+            player_1 given action and can call,raise,or fold.
+
+                if player_1 calls:
+                    action is closed and we continue to next betting street
+
+                if player_1 bets:
+                    player_2 given action and we can call, raise, or fold
+
+                        if player_2 calls:
+                            ...
+                        
+                        if player_2 raises:
+                            ...
+                        
+                        if player_2 folds:
+                            ...
+
+                if player_1 folds:
+                    we close action and player_2 wins
+    
+River:
+     player_2 starts action can check or bet
+        if player_2 checks:
+            player_1 given action and can check or bet.
+
+                if player_1 checks:
+                    action closes and we showdown and player with best 5 card hand wins.
+
+                If player_1 bets;
+                    player_2 can call to close action and continue to showdown or raise to reopen action or fold.
+                    
+                        if player_2 calls:
+                            action closes and we showdown and player with best 5 card hand wins.
+
+                        if player_2 bets:
+                            player_1 can call to close action and continue to showdown, raise to reopen action or fold.
+
+                                if player_1 bets:
+                                    ...
+
+                        if player_2 folds:
+                            action closes and player_1 wins.
+
+        if player_2 bets:
+            player_1 given action and can call,raise,or fold.
+
+                if player_1 calls:
+                    action is closed and we showdown and player with best 5 card hand wins.
+
+                if player_1 bets:
+                    player_2 given action and we can call, raise, or fold
+
+                        if player_2 calls:
+                            ...
+                        
+                        if player_2 raises:
+                            ...
+                        
+                        if player_2 folds:
+                            ...
+
+                if player_1 folds:
+                    we close action and player_2 wins               

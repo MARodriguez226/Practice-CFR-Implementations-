@@ -1,0 +1,19 @@
+Kunh Poker is a 2 player poker game consisting of 3 cards K,Q,J
+where K > Q > J
+
+Game Rules According to Wikipedia:
+
+The game begins with each player putting up a 1 chip ante
+Cards are dealt and player 1 can decide to check or bet 1
+    if player one check then player 2 can check or bet 1
+        if player 2 checks than the person with the higher card wins the pot of 2
+        
+        if player 2 bets then player 1 can call or fold
+            if player 1 folds player 2 wins pot of 3
+
+            if player 1 calls person with the higher card wins pot of 4
+        
+    if player 1 bets then player 2 can fold or call
+        if player 2 folds player 1 takes pot of 3
+
+        if player 2 calls person with the higher card wins pot of 4
