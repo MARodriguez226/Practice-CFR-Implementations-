@@ -108,7 +108,7 @@ def currently_playable(history):
             else:
                 return ['c','a','f']
         if history[-1] == '&':
-            return ['x','b','B','O','a','f']
+            return ['x','b','B','a','f']
         if history[-1] == 'b':
             return ['c','B','a','f']
         if history[-1] in {'B','O'}:
@@ -116,7 +116,7 @@ def currently_playable(history):
         if history[-1] == 'a':
             return ['c','f']
         if history[-1] == 'x':
-            return ['x','b','B','O','a','f']
+            return ['x','b','B','a','f']
     else:
         # no all-in feature 
         if history[-1] == '?':
