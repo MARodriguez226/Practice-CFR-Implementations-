@@ -81,7 +81,7 @@ def currently_playable(history):
             return ['p','a','f']
         if history[-1] == 'p':
             if history.count('p') < 2:
-                return ['p','a','f']
+                return ['c','p','a','f']
             else:
                 return ['c','a','f']
         if history[-1] == '&':
